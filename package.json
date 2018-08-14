@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "dva": "^2.3.1",
-    "umi": "^1.0.0",
-    "umi-plugin-dva": "^0.7.1"
+    "prop-types": "^15.6.2",
+    "react-dnd": "^5.0.0",
+    "react-dnd-html5-backend": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "^4.14.0",
@@ -18,6 +19,11 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "husky": "^0.12.0"
+    "husky": "^0.12.0",
+    "jest": "^23.5.0",
+    "umi": "^1.3.18",
+    "umi-plugin-dll": "^0.2.1",
+    "umi-plugin-dva": "^0.9.1",
+    "umi-plugin-routes": "^0.1.5"
   }
 }
