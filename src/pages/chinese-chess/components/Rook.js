@@ -18,7 +18,7 @@ function collect(connect, monitor) {
 }
 
 @DragSource(ItemTypes.PIECE, knightSource, collect)
-export default class Knight extends Component {
+export default class Rook extends Component {
   render() {
     const { connectDragSource, isDragging } = this.props;
     return connectDragSource(
@@ -28,7 +28,7 @@ export default class Knight extends Component {
         fontWeight: 'bold',
         cursor: 'move'
       }}>
-        ♘
+        车
       </div>
     );
   }

@@ -6,12 +6,12 @@ import { ItemTypes } from './Constants';
 import { DropTarget } from 'react-dnd';
 
 const squareTarget = {
-  canDrop(props) {
-    return canMoveKnight(props.x, props.y);
+  canDrop(props, monitor) {
+    return canMoveKnight(monitor.getItem(), props.x, props.y);
   },
 
-  drop(props) {
-    moveKnight(props.x, props.y);
+  drop(props, monitor) {
+    moveKnight(monitor.getItem(), props.x, props.y);
   }
 };
 
@@ -23,7 +23,7 @@ function collect(connect, monitor) {
   };
 }
 
-@DropTarget(ItemTypes.KNIGHT, squareTarget, collect)
+@DropTarget(ItemTypes.PIECE, squareTarget, collect)
 export default class BoardSquare extends Component {
   static propTypes = {
     x: PropTypes.number.isRequired,

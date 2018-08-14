@@ -4,13 +4,12 @@ import { DragDropContext } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 import BoardSquare from './BoardSquare';
 import Knight from './Knight';
+import Rook from "./Rook"
 
 @DragDropContext(HTML5Backend)
 export default class Board extends Component {
   static propTypes = {
-    knightPosition: PropTypes.arrayOf(
-      PropTypes.number.isRequired
-    ).isRequired,
+    pieces: PropTypes.array.isRequired,
   };
 
   renderSquare(i) {
@@ -28,9 +27,19 @@ export default class Board extends Component {
   }
 
   renderPiece(x, y) {
-    const [knightX, knightY] = this.props.knightPosition;
-    if (x === knightX && y === knightY) {
-      return <Knight />;
+    for (let i = 0; i < this.props.pieces.length; i++) {
+      let piece = this.props.pieces[i]
+      const [px, py] = piece.location
+      if (x === px && y === py) {
+        switch (piece.type) {
+          case 'knight':
+            return <Knight id={piece.id}/>;
+          case 'rook':
+            return <Rook id={piece.id}/>;
+          default:
+            return null
+        }
+      }
     }
   }
   render() {

@@ -6,18 +6,18 @@ import { observe } from './components/Game'
 @withRouter
 export default class extends React.Component {
   state = {
-    knightPosition: [0,0]
+    pieces: []
   }
   componentDidMount () {
-    observe(knightPosition => {
-      console.log(knightPosition)
-      this.setState({ knightPosition })
+    observe(pieces => {
+      console.log(pieces)
+      this.setState({ pieces })
     })
   }
   render () {
     return (
       <div style={{ width: '200px', height: '200px' }}>
-        <Board knightPosition={this.state.knightPosition}></Board>
+        <Board pieces={this.state.pieces}></Board>
         <Prompt when={false} message={location => (
           `Are you sue you want to go to ${location.pathname}?`
         )} />
