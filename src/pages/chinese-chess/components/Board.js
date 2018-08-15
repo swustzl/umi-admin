@@ -3,23 +3,20 @@ import PropTypes from 'prop-types';
 import { DragDropContext } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 import BoardSquare from './BoardSquare';
-import Knight from './Knight';
-import Rook from "./Rook"
+import Piece from './Piece';
 
 @DragDropContext(HTML5Backend)
 export default class Board extends Component {
   static propTypes = {
-    pieces: PropTypes.array.isRequired,
+    pieces: PropTypes.array,
   };
 
   renderSquare(i) {
-    const x = i % 8;
-    const y = Math.floor(i / 8);
+    const y = i % 8;
+    const x = Math.floor(i / 8);
     return (
-      <div key={i}
-           style={{ width: '12.5%', height: '12.5%' }}>
-        <BoardSquare x={x}
-                     y={y}>
+      <div key={i} style={{ width: '12.5%', height: '12.5%' }}>
+        <BoardSquare x={x} y={y}>
           {this.renderPiece(x, y)}
         </BoardSquare>
       </div>
@@ -31,14 +28,7 @@ export default class Board extends Component {
       let piece = this.props.pieces[i]
       const [px, py] = piece.location
       if (x === px && y === py) {
-        switch (piece.type) {
-          case 'knight':
-            return <Knight id={piece.id}/>;
-          case 'rook':
-            return <Rook id={piece.id}/>;
-          default:
-            return null
-        }
+        return <Piece {...piece} />;
       }
     }
   }

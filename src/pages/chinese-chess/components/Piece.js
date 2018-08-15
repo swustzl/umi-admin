@@ -18,17 +18,18 @@ function collect(connect, monitor) {
 }
 
 @DragSource(ItemTypes.PIECE, knightSource, collect)
-export default class Rook extends Component {
+export default class Piece extends Component {
   render() {
-    const { connectDragSource, isDragging } = this.props;
+    const { connectDragSource, isDragging, label, camp } = this.props;
     return connectDragSource(
       <div style={{
         opacity: isDragging ? 0.5 : 1,
         fontSize: 25,
         fontWeight: 'bold',
-        cursor: 'move'
+        cursor: 'move',
+        color: camp,
       }}>
-        车
+        {label}
       </div>
     );
   }

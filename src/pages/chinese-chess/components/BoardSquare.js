@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Square from './Square';
-import { canMoveKnight, moveKnight } from './Game';
+import { canMovePiece, movePiece } from './Game';
 import { ItemTypes } from './Constants';
 import { DropTarget } from 'react-dnd';
 
 const squareTarget = {
   canDrop(props, monitor) {
-    return canMoveKnight(monitor.getItem(), props.x, props.y);
+    return canMovePiece(monitor.getItem(), props.x, props.y);
   },
 
   drop(props, monitor) {
-    moveKnight(monitor.getItem(), props.x, props.y);
+    movePiece(monitor.getItem(), props.x, props.y);
   }
 };
 
