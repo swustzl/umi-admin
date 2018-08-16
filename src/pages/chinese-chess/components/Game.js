@@ -240,7 +240,10 @@ export function observe(o) {
 
 export function movePiece(item, toX, toY) {
   //let piece = pieces.find(p => p.id === item.id)
-  //let toPiece = pieces.find(p => p.location[0] === toX && p.location[1] === toY)
+  let toPiece = pieces.find(p => p.location[0] === toX && p.location[1] === toY)
+  if (toPiece) {
+    pieces = pieces.filter(p => p.id === toPiece.id)
+  }
   pieces.forEach((p) => {
     if (p.id === item.id) {
       p.location = [toX, toY];
