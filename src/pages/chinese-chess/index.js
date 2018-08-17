@@ -10,7 +10,6 @@ export default class extends React.Component {
   }
   componentDidMount () {
     observe(pieces => {
-      console.log(pieces)
       this.setState({ pieces })
     })
   }

@@ -242,7 +242,7 @@ export function movePiece(item, toX, toY) {
   //let piece = pieces.find(p => p.id === item.id)
   let toPiece = pieces.find(p => p.location[0] === toX && p.location[1] === toY)
   if (toPiece) {
-    pieces = pieces.filter(p => p.id === toPiece.id)
+    pieces = pieces.filter(p => p.id !== toPiece.id)
   }
   pieces.forEach((p) => {
     if (p.id === item.id) {
@@ -300,14 +300,14 @@ export function canMovePiece(item, toX, toY) {
     }
     case 'pawns': {
       if (piece.camp === 'red') {
-        if (!toPiece && toX === x && toY > y && (y === 1 && toY - y <= 2 || toY - y < 2)) {
+        if (!toPiece && toX === x && toY > y && (y === 1 && toY - y <= 2 && !pieces.some(p => p.location[0] === x && p.location[1] > y && p.location[1] < toY) || toY - y < 2)) {
           return true
         }
         if (toPiece && toPiece.camp !== piece.camp && Math.abs(toX - x) === 1 && toY - y === 1) {
           return true
         }
       } else {
-        if (!toPiece && toX === x && toY < y && (y === 6 && y - toY <= 2 || y - toY < 2)) {
+        if (!toPiece && toX === x && toY < y && (y === 6 && y - toY <= 2 && !pieces.some(p => p.location[0] === x && p.location[1] > toY && p.location[1] < y) || y - toY < 2)) {
           return true
         }
         if (toPiece && toPiece.camp !== piece.camp && Math.abs(toX - x) === 1 && toY - y === -1) {
