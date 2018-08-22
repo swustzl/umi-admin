@@ -10,8 +10,9 @@ class IndexPage extends React.Component{
         <h1 className={styles.title}>Yay! Welcome to dva!</h1>
         <div className={styles.welcome} />
         <ul className={styles.list}>
-          <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
-          <li><Link to={'/chinese-chess'}>Getting Started</Link></li>
+          <li><Link to={'/chinese-chess'}>Go Chess</Link></li>
+          <li><Link to={'/amap-test'}>Go AMap</Link></li>
+          <li><Link to={'/bmap-test'}>Go BMap</Link></li>
         </ul>
       </div>
     );
