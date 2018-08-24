@@ -13,6 +13,7 @@ class IndexPage extends React.Component{
           <li><Link to={'/chinese-chess'}>Go Chess</Link></li>
           <li><Link to={'/amap-test'}>Go AMap</Link></li>
           <li><Link to={'/bmap-test'}>Go BMap</Link></li>
+          <li><Link to={'/video-react'}>Go VideoReact</Link></li>
         </ul>
       </div>
     );
