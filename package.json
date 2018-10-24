@@ -24,9 +24,7 @@
     "eslint-plugin-react": "^7.1.0",
     "husky": "^0.12.0",
     "jest": "^23.5.0",
-    "umi": "^1.3.18",
-    "umi-plugin-dll": "^0.2.1",
-    "umi-plugin-dva": "^0.9.1",
-    "umi-plugin-routes": "^0.1.5"
+    "umi": "^2.1.2",
+    "umi-plugin-react": "^1.1.1"
   }
 }

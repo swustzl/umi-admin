@@ -1,9 +1,11 @@
 export default {
   plugins: [
-    'umi-plugin-dva',
-    [
-      'umi-plugin-routes',
-      {
+    ['umi-plugin-react', {
+      dva: {
+        immer: true,
+      },
+      antd: true,
+      routes: {
         exclude: [
           /model\.(j|t)sx?$/,
           /service\.(j|t)sx?$/,
@@ -12,13 +14,18 @@ export default {
           /services\//,
         ],
       },
-    ],
-    [
-      'umi-plugin-dll',
-      {
+      polyfills: ['ie9'],
+      locale: {},
+      library: 'react',
+      dynamicImport: {
+        webpackChunkName: true,
+        //loadingComponent: './components/Loading.js',
+      },
+      dll: {
         exclude: [],
         include: ["dva", "dva/router", "dva/saga", "dva/fetch", "antd/es"],
       },
-    ],
+      title: 'default title',
+    }],
   ],
 }
