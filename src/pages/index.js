@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
+import Link from 'umi/link';
 import styles from './index.css';
 
 class IndexPage extends React.Component{
