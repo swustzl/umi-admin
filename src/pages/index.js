@@ -4,10 +4,11 @@ import { Link } from 'dva/router';
 import styles from './index.css';
 
 class IndexPage extends React.Component{
+
   render () {
+    console.log(2222)
     return (
-      <div className={styles.normal}>
-        <h1 className={styles.title}>Yay! Welcome to dva!</h1>
+      <div className={styles.main}>
         <div className={styles.welcome} />
         <ul className={styles.list}>
           <li><Link to={'/chinese-chess'}>Go Chess</Link></li>
