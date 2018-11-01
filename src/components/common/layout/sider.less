@@ -1,0 +1,64 @@
+.sider {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  font-size: 16px;
+  .logo{
+    height: 64px;
+    position: relative;
+    line-height: 64px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background: #002140;
+    overflow: hidden;
+    .header__icon {
+      //margin-left: 25px;
+      font-size: 20px;
+      color: #ffffff;
+      display: flex;
+      .icon {
+        background-image: url("/assets/title.png");
+        background-size: 36px 32px;
+        width: 36px;
+        height: 32px;
+        margin-top: 15px;
+      }
+      .header__iconfont{
+        padding-left: 18px;
+        font-size: 30px;
+        color: #0a6cd6;
+      }
+      .label{
+        margin-left: 24px;
+      }
+    }
+    .header_tips{
+      color: #ffffff;
+      height: 20px;
+      font-size: 10px;
+      position: relative;
+      right: -25px;
+      bottom: 30px;
+    }
+    .icon {
+      background-image: url("/assets/title.png");
+      background-size: 32px 32px;
+      width: 32px;
+      height: 32px;
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+  }
+  .popover_part{
+    background-color: #0a6cd6;
+  }
+}
+
+:global {
+  .ant-menu-inline > .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+    font-size: 16px;
+  }
+  .ant-menu-sub > .ant-menu-item {
+    font-size: 16px;
+  }
+}

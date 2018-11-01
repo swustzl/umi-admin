@@ -16,6 +16,7 @@ export default {
           /models\//,
           /components\//,
           /services\//,
+          /util\.(j|t)sx?$/,
         ],
       },
       locale: {},
@@ -57,4 +58,7 @@ export default {
   urlLoaderExcludes: [
     /\.svg$/,
   ],
+  theme: {
+    "@icon-url"  : "https://at.alicdn.com/t/font_zck90zmlh7hf47vi"
+  }
 }

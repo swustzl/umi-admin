@@ -1,0 +1,56 @@
+.main{
+  width: 100%;
+  .header{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #5fd1fd;
+    margin-bottom: 30px;
+  }
+  .t_header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: solid 1px rgb(34, 88, 186);
+    .t_header_col{
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 1px;
+      color: #60d4ff;
+    }
+  }
+  .t_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .item{
+      display: flex;
+      flex-direction: row;
+      height: 20px;
+      border-top: solid 1px rgba(238, 238, 238, 0.16);
+    }
+  }
+}
+
+.bounceAnimation {
+  //animation: bounceAnimation 1s linear infinite alternate;
+  transform-origin: top; /*  动画基点 */
+  animation:name 1s linear 1 alternate;
+}
+@keyframes name{
+  0%{
+    //transform:rotateX(0deg);
+    opacity: 1;
+  }
+  50%{
+    //transform:rotateX(-90deg);
+    opacity: 0;
+  }
+  100%{
+    //transform:rotateX(0deg);
+    opacity: 1;
+  }
+}

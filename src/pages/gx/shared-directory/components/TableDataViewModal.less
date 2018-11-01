@@ -1,0 +1,79 @@
+.modal{
+  :global{
+    .ant-modal-header{
+      background-color: #e5e5e5;
+      border-radius: 6px 6px 0px 0px;
+      .ant-modal-title{
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 1px;
+        color: #333333;
+      }
+    }
+    .ant-modal-body{
+      padding: 24px 20px;
+      min-height: 400px;
+    }
+    .ant-form-item-required::before{
+      display: none;
+    }
+    .ant-table td { white-space: nowrap; }
+  }
+  .content{
+    width: 100%;
+    .filters{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .filter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        .col_field{
+          .col_field_select{
+            width: 300px;
+            margin-left: 10px;
+          }
+        }
+        .col_operate_select{
+          width: 100px;
+          margin: 0 20px;
+        }
+        .col_value{
+          width: 400px;
+        }
+        .operation{
+          width: 150px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 20px;
+          .btn{
+            width: 30px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+          }
+          .plus{
+            font-size: 30px;
+            color: #0f9b5e;
+          }
+          .minus{
+            font-size: 30px;
+            color: #ff050e;
+          }
+          .find{
+            background-color: #158bd6;
+            color: white;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}

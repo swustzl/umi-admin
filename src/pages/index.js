@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'dva';
 import Link from 'umi/link';
+import Prompt from 'umi/prompt';
 import styles from './index.css';
 
-class IndexPage extends React.Component{
+@connect()
+export default class IndexPage extends React.Component{
 
   render () {
-    console.log(2222)
     return (
       <div className={styles.main}>
         <div className={styles.welcome} />
@@ -16,6 +17,12 @@ class IndexPage extends React.Component{
           <li><Link to={'/bmap-test'}>Go BMap</Link></li>
           <li><Link to={'/video-react'}>Go VideoReact</Link></li>
         </ul>
+        <Prompt
+          when={true}
+          message={(location) => {
+            return window.confirm(`confirm to leave to ${location.pathname}?`);
+          }}
+        />
       </div>
     );
   }
@@ -23,5 +30,3 @@ class IndexPage extends React.Component{
 
 IndexPage.propTypes = {
 };
-
-export default connect()(IndexPage);

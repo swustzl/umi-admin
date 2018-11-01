@@ -1,0 +1,320 @@
+@import "~antd/lib/style/themes/default.less";
+.main{
+  width: 100%;
+}
+.header {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  //justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 8px 0;
+  background-image: linear-gradient(90deg,
+  #1c67b2 0%,
+  #8bc8fb 100%),
+  linear-gradient(
+    #0168b7,
+    #0168b7);
+  background-blend-mode: normal,
+  normal;
+ // box-shadow: 0 1px 4px rgba(0,21,41,.08);
+ // -webkit-box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  div {
+    display: inline-flex;
+    font-size: 18px;
+    padding: 0;
+  }
+  .header__icon {
+    margin-left: 360px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 300px;
+    .search {
+      width: 300px;
+      height: 44px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      border: solid 1px #bfbfbf;
+      margin-right: 20px;
+      :global{
+        .ant-input-suffix{
+          font-size: 20px;
+        }
+      }
+    }
+    .action{
+      width: 40px;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+  .icon {
+    background-image: url("/assets/title.png");
+    background-size: 64px 64px;
+    width: 64px;
+    height: 64px;
+  }
+  .title {
+    width: 482px;
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+}
+.carousel{
+  width: 1920px;
+  height: 450px;
+  background-color: #000000;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/home-bg.png");
+  .b_title{
+    /*width: 961px;
+    height: 58px;*/
+    font-family: MFLiHei_Noncommercial-Regular;
+    font-size: 60px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 5px;
+    color: #ffffff;
+  }
+  .b_data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .data_des{
+      height: 50px;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 2px;
+      color: #ffffff;
+      padding: 0 10px;
+      text-shadow: 0 0 10px #000;
+      .number{
+        font-size: 36px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        color: #6ec0ff;
+      }
+    }
+  }
+}
+.navigation_bar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  background-color: #ffffff;
+  box-shadow: inset 10px -10px 10px rgba(80, 80, 80, 0.2);
+  border-radius: 10px;
+  border: solid 2px #fefeff;
+  .navigation_bar_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: 100%;
+    position: relative;
+  }
+  .navigate{
+    padding: 0 20px;
+    //height: 20px;
+    font-family: FZCSJW--GB1-0;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    color: #0168b7;
+  }
+}
+.login{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 34px;
+  .login_content{
+    width: 1200px;
+    height: 34px;
+    background-color: #7ecef4;
+    border: solid 1px #eeeeee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 20px;
+    .welcome{
+      letter-spacing: 1px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+    .right{
+      margin-right: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      .user{
+        color: white;
+        margin-right: 10px;
+      }
+      .icon{
+        font-size: 30px;
+        color: white;
+      }
+    }
+    :global{
+      .ant-form-item-label label{
+        color: white;
+      }
+      input::-webkit-input-placeholder {
+        font-size: 12px;
+      }
+    }
+    .input{
+      width: 130px;
+      border-radius: 5px;
+    }
+    .vcode{
+      width: 80px;
+      border-radius: 0 5px 5px 0;
+      border: solid 1px #d9d9d9;
+      :global{
+        #bgi{
+          border-radius: 0;
+        }
+        #bgi_mask{
+          background-color: rgba(0,0,0,0.5);
+        }
+      }
+    }
+    .vcode_input{
+      width: 100px;
+      border-radius: 5px 0 0 5px;
+    }
+    .btn{
+      background-color: transparent;
+      border-width: 0;
+      span{
+        color: white;
+      }
+    }
+  }
+}
+.subMenu{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  color: #0168b7;
+}
+.service_guide{
+  position: absolute;
+  z-index: 99;
+  //top: calc(~"50vh - 200px");
+  top: 100px;
+  right: 40px;
+  height: 400px;
+  width: 80px;
+  background-image: url("/assets/icon/black.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0;
+  border: solid 1px #dcdcdc;
+  .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: #514a4a;
+    &:hover{
+      color: #1565d2;
+    }
+    span{
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 1px;
+      margin-top: 5px;
+    }
+  }
+}
+.footer{
+  width: 100%;
+  height: 180px;
+  background-image: linear-gradient(90deg,
+  #1c67b2 0%,
+  #8bc8fb 100%),
+  linear-gradient(
+    #0168b7,
+    #0168b7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slideToUpAnimation {
+  animation: slideToUpAnimation 1s linear 1 alternate;
+  animation-fill-mode: forwards
+}
+.slideToDownAnimation {
+  animation: slideToDownAnimation 1s linear 1 alternate;
+  animation-fill-mode: forwards
+}
+@keyframes slideToUpAnimation{
+  0%{
+    top: calc(~"50vh - 200px");
+  }
+  100%{
+    top: 100px;
+  }
+}
+@keyframes slideToDownAnimation{
+  0%{
+    top: 100px;
+  }
+  100%{
+    top: calc(~"50vh - 200px");
+  }
+}
+

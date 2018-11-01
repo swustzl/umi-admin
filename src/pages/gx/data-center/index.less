@@ -1,0 +1,38 @@
+.main{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  .list{
+    margin-top: 10px;
+    .line{
+      width: 100%;
+      height: 1px;
+      line-height: 1px;
+      min-height: 1px;
+      background-color: #d7d7d7;
+      margin-bottom: 20px;
+    }
+    .item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 20px;
+      height: 50px;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 1px;
+      color: #514a4a;
+      cursor: pointer;
+      .date{
+        margin-left: 20px;
+      }
+      &:hover{
+        background-color: #f4f4f4;
+      }
+    }
+    .pagination{
+      text-align: right;
+    }
+  }
+}

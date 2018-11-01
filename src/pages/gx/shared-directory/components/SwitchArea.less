@@ -1,0 +1,51 @@
+.location{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .loc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon{
+      font-size: 18px;
+      color: #0068b7;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #333333;
+    }
+  }
+  .switch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #3386c5;
+    cursor: pointer;
+  }
+}
+.switchPopover{
+  :global{
+    .ant-popover-inner-content{
+      padding: 10px 0;
+    }
+  }
+  .switchItem{
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover{
+      background-color: #f4f4f4;
+    }
+  }
+}
