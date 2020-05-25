@@ -13,6 +13,9 @@
 # misc
 .DS_Store
 
+# idea
+.idea
+
 # umi
 .umi
 .umi-production

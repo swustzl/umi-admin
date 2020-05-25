@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import Link from 'umi/link';
 import Prompt from 'umi/prompt';
 import styles from './index.css';
+import Qrcode from "../components/Qrcode"
 
 @connect()
 export default class IndexPage extends React.Component{
@@ -16,7 +17,9 @@ export default class IndexPage extends React.Component{
           <li><Link to={'/amap-test'}>Go AMap</Link></li>
           <li><Link to={'/bmap-test'}>Go BMap</Link></li>
           <li><Link to={'/video-react'}>Go VideoReact</Link></li>
+          <li><Link to={'/test'}>Go Test</Link></li>
         </ul>
+        <Qrcode/>
         <Prompt
           when={true}
           message={(location) => {
